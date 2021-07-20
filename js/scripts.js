@@ -1,7 +1,6 @@
 
 function newItem(){
 
-    //javascript
     //1. Adding a new item to the list of items: 
        let li = $('<li></li>');
        let inputValue = $('#input').val();
@@ -10,7 +9,7 @@ function newItem(){
        if (inputValue === '') {
          alert("You must write something!");
        } else {
-         $('list').append(li);
+         $('#list').append(li);
        }
     
      //2. Crossing out an item from the list of items:
@@ -29,23 +28,18 @@ function newItem(){
     
 
      //3(ii). Adding CLASS DELETE (DISPLAY: NONE) from the css:
-        crossOutButton.on("click", deleteListItem);
-        function deleteListItem(){
-          li.addClass("delete")
-        };
+      crossOutButton.on("click", deleteListItem);
+      function deleteListItem(){
+        li.addClass("delete")
+      }
 
 
      // 4. Reordering the items: 
-        $('#list').sortable();
+       $('#list').sortable();
     
     }
     
      
-    
-    
-    
-    
-    
     
     
     
